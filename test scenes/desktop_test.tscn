@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d8pa3lf6rpka"]
+
+[node name="Control" type="Control" unique_id=2030413694]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="." unique_id=1125601445]
+oversampling_override = 1.0
+title = "Window test"
+position = Vector2i(75, 50)
+size = Vector2i(500, 500)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=682282602]
