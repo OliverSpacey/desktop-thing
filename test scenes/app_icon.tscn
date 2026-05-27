@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cg7q6bh77lq5q"]
+
+[ext_resource type="Script" uid="uid://xcnlnoqniuss" path="res://scripts/app_icon.gd" id="1_idsci"]
+[ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="1_oxafu"]
+
+[node name="AppIcon" type="Button" unique_id=19066680 node_paths=PackedStringArray("icon_texture_rect")]
+custom_minimum_size = Vector2(60, 60)
+anchors_preset = -1
+anchor_right = 0.031000001
+anchor_bottom = 0.056
+offset_right = 0.47999573
+offset_bottom = -0.48000336
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idsci")
+icon_texture_rect = NodePath("IconTexture")
+
+[node name="IconTexture" type="TextureRect" parent="." unique_id=1964054059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oxafu")
+expand_mode = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

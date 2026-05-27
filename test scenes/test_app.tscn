@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cmmygck224v7t"]
+
+[ext_resource type="Script" uid="uid://molmpipv0j0c" path="res://scripts/test_app.gd" id="1_n10by"]
+[ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="2_pb12t"]
+
+[node name="AppWindow" type="Window" unique_id=720951930]
+oversampling_override = 1.0
+title = "Test app"
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+script = ExtResource("1_n10by")
+app_icon_texture = ExtResource("2_pb12t")
+
+[node name="Panel" type="Panel" parent="." unique_id=67344344]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
