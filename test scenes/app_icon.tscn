@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="1_oxafu"]
 
 [node name="AppIcon" type="Button" unique_id=19066680 node_paths=PackedStringArray("icon_texture_rect")]
-custom_minimum_size = Vector2(60, 60)
 anchors_preset = -1
 anchor_right = 0.031000001
 anchor_bottom = 0.056

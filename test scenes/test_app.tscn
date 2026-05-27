@@ -6,8 +6,9 @@
 [node name="AppWindow" type="Window" unique_id=720951930]
 oversampling_override = 1.0
 title = "Test app"
-position = Vector2i(0, 36)
+position = Vector2i(426, 69)
 size = Vector2i(500, 500)
+content_scale_aspect = 1
 script = ExtResource("1_n10by")
 app_icon_texture = ExtResource("2_pb12t")
 

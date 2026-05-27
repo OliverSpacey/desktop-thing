@@ -25,7 +25,21 @@ func add_app_icon_to_task_bar(app: App):
 	var icon_texture : TextureRect = app_icon.icon_texture_rect
 	icon_texture.texture = app.app_icon_texture
 	app_icon.assign_parent_app(app)
+	resize_icons()
 
 func remove_app_icon_from_task_bar(app: App):
 	print("Removing icon from task bar")
 	container.remove_child(app.app_icon)
+	resize_icons()
+
+
+func _on_item_rect_changed() -> void:
+	resize_icons()
+
+func resize_icons():
+	var icons = container.get_children()
+	for icon in icons:
+		icon.custom_minimum_size = Vector2(get_rect().size[1], get_rect().size[1])
+		#print(icon.name)
+		#print(icon.custom_minimum_size)
+		#print(icon.size)

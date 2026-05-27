@@ -16,10 +16,10 @@ task_bar = NodePath("TaskBar")
 [node name="TaskBar" type="Panel" parent="." unique_id=1750698352 node_paths=PackedStringArray("container")]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.943
+anchor_top = 0.94400007
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.06402588
+offset_top = 0.47991943
 script = ExtResource("1_xijkr")
 container = NodePath("HBoxContainer")
 
@@ -31,7 +31,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HomeButton" type="Button" parent="TaskBar/HBoxContainer" unique_id=1414083020]
-custom_minimum_size = Vector2(61, 61)
+[node name="HomeButton" type="Button" parent="TaskBar/HBoxContainer" unique_id=999998484]
 layout_mode = 2
 text = "#"
+
+[connection signal="item_rect_changed" from="TaskBar" to="TaskBar" method="_on_item_rect_changed"]
