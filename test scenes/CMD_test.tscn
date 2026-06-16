@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://v34imtlxin23"]
+[gd_scene format=3 uid="uid://bqgn4hwcx43f1"]
 
-[node name="Node2D" type="Node2D" unique_id=2132928122]
+[ext_resource type="Script" uid="uid://molmpipv0j0c" path="res://scripts/test_app.gd" id="1_v33af"]
+[ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="2_i4fuf"]
+
+[node name="CMDWindow" type="Window" unique_id=720951930]
+oversampling_override = 1.0
+title = "Test app"
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+content_scale_aspect = 1
+script = ExtResource("1_v33af")
+app_icon_texture = ExtResource("2_i4fuf")
+
+[node name="Panel" type="Panel" parent="." unique_id=67344344]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1734932866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
