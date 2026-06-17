@@ -1,40 +1,79 @@
 [gd_scene format=3 uid="uid://bqgn4hwcx43f1"]
 
 [ext_resource type="Script" uid="uid://cqmlgjvsbyxbl" path="res://scripts/cmd.gd" id="1_0afla"]
+[ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="3_0i8go"]
 
-[node name="CMDWindow" type="Window" unique_id=720951930 node_paths=PackedStringArray("cmd_entry_field")]
+[node name="CMDWindow" type="Window" unique_id=720951930 node_paths=PackedStringArray("cmd_entry_field", "text_history_label")]
 oversampling_override = 1.0
 title = "Test app"
 position = Vector2i(0, 36)
 size = Vector2i(500, 500)
 content_scale_aspect = 1
 script = ExtResource("1_0afla")
-cmd_entry_field = NodePath("Panel/CMDEntry")
+cmd_entry_field = NodePath("WindowBackgroundPanel/CMDEntryControl/HBoxContainer/LineEdit")
+text_history_label = NodePath("WindowBackgroundPanel/TextHistoryPanel/ScrollContainer/TextHistory")
 
-[node name="Panel" type="Panel" parent="." unique_id=67344344]
+[node name="WindowBackgroundPanel" type="Panel" parent="." unique_id=67344344]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel" unique_id=1641673364]
-layout_mode = 0
-offset_right = 26.0
-offset_bottom = 41.0
+[node name="CMDEntryControl" type="Control" parent="WindowBackgroundPanel" unique_id=556522467]
+layout_mode = 1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -40.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBackgroundPanel/CMDEntryControl" unique_id=253599325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name=">" type="Label" parent="WindowBackgroundPanel/CMDEntryControl/HBoxContainer" unique_id=1327594025]
+layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 20
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
 text = ">"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="CMDEntry" type="TextEdit" parent="Panel" unique_id=1734932866]
+[node name="LineEdit" type="LineEdit" parent="WindowBackgroundPanel/CMDEntryControl/HBoxContainer" unique_id=1475164549]
+layout_mode = 2
+size_flags_horizontal = 3
+keep_editing_on_text_submit = true
+caret_blink = true
+caret_blink_interval = 0.55
+right_icon = ExtResource("3_0i8go")
+icon_expand_mode = 1
+
+[node name="TextHistoryPanel" type="Panel" parent="WindowBackgroundPanel" unique_id=130798721]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 26.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-wrap_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBackgroundPanel/TextHistoryPanel" unique_id=923371835]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextHistory" type="Label" parent="WindowBackgroundPanel/TextHistoryPanel/ScrollContainer" unique_id=2102667391]
+layout_mode = 2

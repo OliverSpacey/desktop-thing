@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cnrm7v4q8kme3" path="res://test scenes/desktop_ui.tscn" id="1_unify"]
 [ext_resource type="PackedScene" uid="uid://bqgn4hwcx43f1" path="res://test scenes/CMD_test.tscn" id="3_xqiqu"]
 
-[node name="Desktop" type="Control" unique_id=2030413694 node_paths=PackedStringArray("desktop_ui", "test_app")]
+[node name="Desktop" type="Control" unique_id=2030413694 node_paths=PackedStringArray("desktop_ui")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_35av8")
 desktop_ui = NodePath("DesktopUI")
-test_app = NodePath("CMDWindow")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=682282602]
 
