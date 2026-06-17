@@ -19,10 +19,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label" type="Label" parent="Panel" unique_id=1641673364]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 41.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1734932866]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 26.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+wrap_mode = 1

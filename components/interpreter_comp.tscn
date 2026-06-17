@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://p0341eqkphnp"]
+
+[ext_resource type="Script" uid="uid://dr5lu6fsgnpkr" path="res://scripts/interpreter_comp.gd" id="1_p7eou"]
+
+[node name="InterpreterComp" type="Node" unique_id=617774735]
+script = ExtResource("1_p7eou")
