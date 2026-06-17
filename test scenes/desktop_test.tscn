@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bl73hblxisn70" path="res://scripts/desktop_test.gd" id="1_35av8"]
 [ext_resource type="PackedScene" uid="uid://cnrm7v4q8kme3" path="res://test scenes/desktop_ui.tscn" id="1_unify"]
 [ext_resource type="PackedScene" uid="uid://bqgn4hwcx43f1" path="res://test scenes/CMD_test.tscn" id="3_xqiqu"]
-[ext_resource type="PackedScene" uid="uid://p0341eqkphnp" path="res://components/interpreter_comp.tscn" id="4_q2u4j"]
 
 [node name="Desktop" type="Control" unique_id=2030413694 node_paths=PackedStringArray("desktop_ui", "test_app")]
 layout_mode = 3
@@ -27,6 +26,3 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="CMDWindow" parent="." unique_id=720951930 instance=ExtResource("3_xqiqu")]
-
-[node name="InterpreterComp" parent="." unique_id=617774735 node_paths=PackedStringArray("desktop_scene") instance=ExtResource("4_q2u4j")]
-desktop_scene = NodePath("..")
