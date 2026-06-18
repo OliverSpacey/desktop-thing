@@ -7,6 +7,7 @@ class_name App
 @export var app_name : String
 
 
+var desktop : Desktop
 var app_icon : AppIcon
 
 func _ready():

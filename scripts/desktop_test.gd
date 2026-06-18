@@ -10,6 +10,8 @@ class_name Desktop
 var apps : Array[App]
 var open_apps : Array[App]
 var minimised_apps : Array[App]
+var log_window : Log
+var cmd_window : CMD
 
 
 func _ready():
@@ -34,4 +36,9 @@ func TEMP_find_apps_as_children():
 	for child in children:
 		if child is App:
 			found_apps.append(child)
+			if child is Log:
+				log_window = child
+			elif child is CMD:
+				cmd_window = child
+			child.desktop = self
 	return found_apps

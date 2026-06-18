@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dhwcj2rl8dhvl"]
+
+[ext_resource type="Script" uid="uid://brstxnjcx3lwo" path="res://scripts/log.gd" id="1_f3kxc"]
+
+[node name="LogWindow" type="Window" unique_id=720951930 node_paths=PackedStringArray("text_history_label")]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+content_scale_aspect = 1
+script = ExtResource("1_f3kxc")
+text_history_label = NodePath("WindowBackgroundPanel/TextHistoryPanel/ScrollContainer/TextHistory")
+
+[node name="WindowBackgroundPanel" type="Panel" parent="." unique_id=67344344]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextHistoryPanel" type="Panel" parent="WindowBackgroundPanel" unique_id=130798721]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBackgroundPanel/TextHistoryPanel" unique_id=923371835]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextHistory" type="Label" parent="WindowBackgroundPanel/TextHistoryPanel/ScrollContainer" unique_id=2102667391]
+layout_mode = 2
