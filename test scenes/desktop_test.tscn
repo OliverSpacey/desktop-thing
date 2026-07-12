@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cnrm7v4q8kme3" path="res://test scenes/desktop_ui.tscn" id="1_unify"]
 [ext_resource type="PackedScene" uid="uid://bqgn4hwcx43f1" path="res://test scenes/CMD_test.tscn" id="3_xqiqu"]
 [ext_resource type="PackedScene" uid="uid://dhwcj2rl8dhvl" path="res://test scenes/Log_test.tscn" id="4_q2u4j"]
+[ext_resource type="PackedScene" uid="uid://cxhanaqbd6mfi" path="res://test scenes/CMD_test_2.tscn" id="5_7cps6"]
 
 [node name="Desktop" type="Control" unique_id=2030413694 node_paths=PackedStringArray("desktop_ui")]
 layout_mode = 3
@@ -26,5 +27,9 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="CMDWindow" parent="." unique_id=720951930 instance=ExtResource("3_xqiqu")]
+visible = false
 
 [node name="LogWindow" parent="." unique_id=1532536046 instance=ExtResource("4_q2u4j")]
+visible = false
+
+[node name="CMDWindow2" parent="." unique_id=77664960 instance=ExtResource("5_7cps6")]

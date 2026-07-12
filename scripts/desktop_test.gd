@@ -15,6 +15,9 @@ var cmd_window : CMD
 
 
 func _ready():
+	grab_click_focus()
+	print("test", has_focus())
+	
 	#Finds any children in the scene that are apps (makes it easier to drop in test apps for now)
 	var TEMP_apps_to_add = TEMP_find_apps_as_children()
 	

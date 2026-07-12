@@ -2,6 +2,7 @@ extends App
 class_name CMD
 
 @export var cmd_entry_field : LineEdit
+@export var cmd_log : Label
 
 func _ready():
 	app_name = "CMD Terminal"
