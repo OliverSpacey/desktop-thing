@@ -5,7 +5,7 @@ class_name AppIcon
 
 var parent_app : App
 
-func assign_parent_app(app: App):
+func assign_parent_app(app: App) -> void:
 	parent_app = app
 	parent_app.app_icon = self
 

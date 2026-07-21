@@ -14,10 +14,7 @@ var log_window : Log
 var cmd_window : CMD
 
 
-func _ready():
-	grab_click_focus()
-	print("test", has_focus())
-	
+func _ready() -> void:
 	#Finds any children in the scene that are apps (makes it easier to drop in test apps for now)
 	var TEMP_apps_to_add = TEMP_find_apps_as_children()
 	
@@ -32,7 +29,7 @@ func _ready():
 func add_apps_on_start(apps_to_add : Array[App]):
 	apps_on_start.append_array(apps_to_add)
 
-func TEMP_find_apps_as_children():
+func TEMP_find_apps_as_children() -> Array[App]:
 	var found_apps : Array[App] = []
 	var children = get_children()
 	

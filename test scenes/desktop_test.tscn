@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bqgn4hwcx43f1" path="res://test scenes/CMD_test.tscn" id="3_xqiqu"]
 [ext_resource type="PackedScene" uid="uid://dhwcj2rl8dhvl" path="res://test scenes/Log_test.tscn" id="4_q2u4j"]
 [ext_resource type="PackedScene" uid="uid://cxhanaqbd6mfi" path="res://test scenes/CMD_test_2.tscn" id="5_7cps6"]
+[ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="6_2h3l8"]
 
 [node name="Desktop" type="Control" unique_id=2030413694 node_paths=PackedStringArray("desktop_ui")]
 layout_mode = 3
@@ -33,3 +34,4 @@ visible = false
 visible = false
 
 [node name="CMDWindow2" parent="." unique_id=77664960 instance=ExtResource("5_7cps6")]
+app_icon_texture = ExtResource("6_2h3l8")

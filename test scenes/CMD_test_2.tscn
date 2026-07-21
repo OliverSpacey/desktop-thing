@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8r050obqpde4" path="res://scripts/cmd_2.gd" id="1_8sril"]
 [ext_resource type="Texture2D" uid="uid://ds18qw04ceccq" path="res://icon.svg" id="2_ffkhn"]
 
-[node name="CMDWindow2" type="Window" unique_id=720951930 node_paths=PackedStringArray("cmd_entry_field", "cmd_log")]
+[node name="CMDWindow2" type="Window" unique_id=720951930 node_paths=PackedStringArray("cmd_entry_field", "cmd_log", "scroll_container")]
 oversampling_override = 1.0
 position = Vector2i(0, 36)
 size = Vector2i(500, 500)
@@ -11,6 +11,7 @@ content_scale_aspect = 1
 script = ExtResource("1_8sril")
 cmd_entry_field = NodePath("WindowBackgroundPanel/CMDEntryControl/HBoxContainer/LineEdit")
 cmd_log = NodePath("WindowBackgroundPanel/TextHistoryPanel/ScrollContainer/TextHistory")
+scroll_container = NodePath("WindowBackgroundPanel/TextHistoryPanel/ScrollContainer")
 
 [node name="WindowBackgroundPanel" type="Panel" parent="." unique_id=67344344]
 anchors_preset = 15
@@ -53,10 +54,12 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 keep_editing_on_text_submit = true
+clear_button_enabled = true
 caret_blink = true
 caret_blink_interval = 0.55
 right_icon = ExtResource("2_ffkhn")
 icon_expand_mode = 1
+right_icon_scale = 0.65
 
 [node name="TextHistoryPanel" type="Panel" parent="WindowBackgroundPanel" unique_id=130798721]
 layout_mode = 1
@@ -78,5 +81,4 @@ grow_vertical = 2
 [node name="TextHistory" type="Label" parent="WindowBackgroundPanel/TextHistoryPanel/ScrollContainer" unique_id=2102667391]
 layout_mode = 2
 
-[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
